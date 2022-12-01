@@ -13,15 +13,54 @@ a.navbar-brand{
 
 /* SIDEBAR POSITION */
 .sidebar {
-  background-color: #f1f1f1;
+  background-color: #404040;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 300px;
+  min-width: 250px;
 }
 .sidebar__content {
   padding: 8px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.list-students{
+  margin-top: 3em;
+  width: inherit;
+  color: azure;
+  font-size: 1.4rem;
+}
+
+ul{
+  list-style-type: none;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: left !important;
+  margin-top: 70px;
+}
+
+label{
+  color: azure;
+  padding: 0;
+  display: inline-block;
+  font-size:15px;
+  margin-bottom: 0 !important;
+}
+
+input[type=text]{
+  display: inline-block;
+  margin-top:10px;
+  width:100%;
+  font-size:15px;
+  border-radius:2px;
+  border:3px solid #98d0f1
+}
+
+button.btn.btn-primary{
+  margin-top: 25px;
 }
