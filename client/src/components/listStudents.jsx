@@ -6,7 +6,7 @@ const ListStudents = (props) => {
       
     return (
       <div className="list-students">
-        <h2> Students </h2>
+        <h2> Participants </h2>
         <ul>
           {students.map((student) => {
             return <li key={student.studentid}> {student.firstname} {student.lastname}</li>

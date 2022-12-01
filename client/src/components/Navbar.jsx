@@ -3,7 +3,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import BlueTechtonica from "../assets/BlueTechtonicaWord.png"
 
-function MyNavBar() {
+function MyNavBar(props) {
+
+  const onStudentsClicked = () =>{
+    props.navigate("students");
+  }
+
+
   return (
     <>
     <Navbar bg="dark" variant="dark" sticky="top">
@@ -16,7 +22,7 @@ function MyNavBar() {
               alt="React Bootstrap logo"
             />
         </Navbar.Brand>
-        <Nav.Link href="/">Add Student</Nav.Link>
+        <Nav.Link onClick={onStudentsClicked}>Students</Nav.Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
