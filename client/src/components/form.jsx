@@ -13,6 +13,7 @@ const MyForm = (props) => {
     const handleNameChange = (event) => {
       const firstname = event.target.value;
       setStudent((student) => ({ ...student, firstname }));
+      
     };
   
     const handleLastnameChange = (event) => {
@@ -31,8 +32,9 @@ const MyForm = (props) => {
           return response.json();
         })
         .then((data) => {
-          console.log("From the post ", data);
+          //console.log("From the post ", data);
           props.onSaveStudent(data);
+          setStudent({id: null, firstname: "", lastname: ""});
         });
     };  
   

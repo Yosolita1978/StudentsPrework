@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hola, from My template ExpressJS' });
   });
   
-  // create the get request
+  // create the get request for students
   app.get('/api/students', cors(), async (req, res) => {
     try {
       const { rows: students } = await db.query('SELECT * FROM students');
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     }
   });
 
-  // create the POST request
+  // create the POST request for students
 app.post('/api/students', cors(), async (req, res) => {
     const newStudent = {
       firstname: req.body.firstname,
@@ -38,6 +38,27 @@ app.post('/api/students', cors(), async (req, res) => {
     console.log(result.rows[0]);
     res.json(result.rows[0]);
   });
+
+  // delete request
+app.delete('/api/students/:studentId', cors(), async (req, res) =>{
+  const studentId = req.params.studentId;
+  //console.log("From the delete request-url", studentId);
+  await db.query('DELETE FROM students WHERE studentid=$1', [studentId]);
+  res.status(200).end();
+
+});
+
+
+  // create the get request for tags
+  app.get('/api/tags', cors(), async (req, res) => {
+    try {
+      const { rows: tags } = await db.query('SELECT * FROM tags');
+      res.send(tags);
+    } catch (e) {
+      return res.status(400).json({e });
+    }
+  });
+
   
 
   // console.log that your server is up and running

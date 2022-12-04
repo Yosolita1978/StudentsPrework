@@ -2,11 +2,11 @@ body {
   min-height: 100vh;
 }
 
-a.navbar-brand{
+a.navbar-brand {
   margin-inline-start: -225px;
 }
 
-.nav-link{
+.nav-link {
   color: white !important;
   margin-left: 5em;
 }
@@ -20,47 +20,64 @@ a.navbar-brand{
   left: 0;
   min-width: 250px;
 }
+
 .sidebar__content {
   padding: 8px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.list-students{
+.mainscreen {
+  /*	position: absolute;*/
+  /*top: 90px;
+    */
+  /*width: 100% !important; no width needed and stop using !important*/
+  padding-left: 300px;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.list-students {
   margin-top: 3em;
   width: inherit;
   color: azure;
   font-size: 1.4rem;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-form{
+li {
+  padding: 5px;
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: left !important;
   margin-top: 70px;
 }
 
-label{
+label {
   color: azure;
   padding: 0;
   display: inline-block;
-  font-size:15px;
+  font-size: 15px;
   margin-bottom: 0 !important;
 }
 
-input[type=text]{
+input[type=text] {
   display: inline-block;
-  margin-top:10px;
-  width:100%;
-  font-size:15px;
-  border-radius:2px;
-  border:3px solid #98d0f1
+  margin-top: 10px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 2px;
+  border: 3px solid #98d0f1
 }
 
-button.btn.btn-primary{
+button.btn.btn-primary {
   margin-top: 25px;
 }
