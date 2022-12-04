@@ -61,6 +61,13 @@ a.navbar-brand {
   font-size: 1.4rem;
 }
 
+.list-tags {
+  margin-top: 3em;
+  width: inherit;
+  color: azure;
+  font-size: 1.4rem;
+}
+
 ul {
   list-style-type: none;
 }

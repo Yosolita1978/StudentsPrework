@@ -4,8 +4,7 @@ import { Button, Form } from "react-bootstrap";
 const MyFormTag = (props) => {
     const { initialTag = { id: null, name: "" } } = props;
 
-
-    // This is the oroginal State with not initial student 
+    // This is the oroginal State with not initial tag 
     const [tag, setTag] = useState(initialTag);
 
     //create functions that handle the event of the user typing into the form
@@ -15,27 +14,27 @@ const MyFormTag = (props) => {
 
     };
 
-    //TO-DO: A function to handle the post request
-    // const postTag = (newStudent) => {
-    //     return fetch("http://localhost:8080/api/students", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify(newStudent),
-    //     })
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             //console.log("From the post ", data);
-    //             props.onSaveStudent(data);
-    //             setStudent({ id: null, firstname: "", lastname: "" });
-    //         });
-    // };
+    //A function to handle the post request
+    const postTag = (newTag) => {
+        return fetch("http://localhost:8080/api/tags", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newTag),
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                //console.log("From the post ", data);
+                props.onSaveTag(data);
+                //This is just to clean the form to a empty state
+                setTag({ id: null, name: ""});
+            });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(tag);
-        //props.onSaveTag(tag);
+        postTag(tag);
     };
 
     return (
@@ -49,7 +48,7 @@ const MyFormTag = (props) => {
                 value={tag.name}
                 onChange={handleName}
             />
-            <Button type="submit">Add a Tag</Button>
+            <Button type="submit">Add Tag</Button>
         </Form>
     );
 

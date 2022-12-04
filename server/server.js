@@ -59,7 +59,17 @@ app.delete('/api/students/:studentId', cors(), async (req, res) =>{
     }
   });
 
-  
+  // create the POST request for TAGS
+app.post('/api/tags', cors(), async (req, res) => {
+  const newTag = {name: req.body.name};
+  console.log([newTag.name]);
+  const result = await db.query(
+    'INSERT INTO tags(name) VALUES($1) RETURNING *',
+    [newTag.name],
+  );
+  console.log(result.rows[0]);
+  res.json(result.rows[0]);
+});
 
   // console.log that your server is up and running
 app.listen(PORT, () => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import MyFormTag from './formtags';
+import ListTags from './listTags';
 
 const SidebarTags = () => {
     // this is my original state with an array of students 
@@ -48,6 +49,7 @@ const SidebarTags = () => {
     <div>
     <div className='sidebar-tags'>
         <MyFormTag onSaveTag={onSaveTag}/>
+        <ListTags tags={tags} />
 
     </div>
     </div>
