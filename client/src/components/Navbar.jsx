@@ -9,6 +9,10 @@ function MyNavBar(props) {
     props.navigate("students");
   }
 
+  const onTagsClicked = () =>{
+    props.navigate("tags");
+  }
+
 
   return (
     <>
@@ -23,6 +27,7 @@ function MyNavBar(props) {
             />
         </Navbar.Brand>
         <Nav.Link onClick={onStudentsClicked}>Students</Nav.Link>
+        <Nav.Link onClick={onTagsClicked}>Tags</Nav.Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>

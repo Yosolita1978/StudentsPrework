@@ -11,7 +11,7 @@ a.navbar-brand {
   margin-left: 5em;
 }
 
-/* SIDEBAR POSITION */
+/* BOTH SIDEBAR POSITION */
 .sidebar {
   background-color: #404040;
   height: 100vh;
@@ -22,6 +22,21 @@ a.navbar-brand {
 }
 
 .sidebar__content {
+  padding: 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sidebar-tags {
+  background-color: #404040;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 250px;
+}
+
+.sidebar-tags__content {
   padding: 8px;
   overflow-y: scroll;
   overflow-x: hidden;

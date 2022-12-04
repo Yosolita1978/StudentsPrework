@@ -38,9 +38,9 @@ const Sidebar = () => {
 
   function showStudent(student){
     setIsClicked(true);
-    console.log("this is the parent", student);
+    //console.log("this is the parent", student);
     setStudent(student);
-    console.log("this is the parent", student);
+    //console.log("this is the parent", student);
   }
 
   useEffect(() => {

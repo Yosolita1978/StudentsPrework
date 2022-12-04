@@ -1,1 +1,1 @@
-![Working progress - for now the project looks like this in local](https://raw.githubusercontent.com/Yosolita1978/screenshoots/c020bdc0bbf41fc1905d620216daa25a85a2bcea/2022/FinalProject/Screen%20Shot%202022-12-03%20at%204.56.04%20PM.png)
+[Working progress - for now the project looks like this in local](https://raw.githubusercontent.com/Yosolita1978/screenshoots/c020bdc0bbf41fc1905d620216daa25a85a2bcea/2022/FinalProject/Screen%20Shot%202022-12-03%20at%204.56.04%20PM.png)
