@@ -39,7 +39,7 @@ app.post('/api/students', cors(), async (req, res) => {
     res.json(result.rows[0]);
   });
 
-  // delete request
+  // delete request for students
 app.delete('/api/students/:studentId', cors(), async (req, res) =>{
   const studentId = req.params.studentId;
   //console.log("From the delete request-url", studentId);
@@ -70,6 +70,15 @@ app.post('/api/tags', cors(), async (req, res) => {
   console.log(result.rows[0]);
   res.json(result.rows[0]);
 });
+
+  // delete request for Tags
+  app.delete('/api/tags/:tagId', cors(), async (req, res) =>{
+    const tagId = req.params.tagId;
+    //console.log("From the delete request-url", studentId);
+    await db.query('DELETE FROM tags WHERE tagid=$1', [tagId]);
+    res.status(200).end();
+  
+  });
 
   // console.log that your server is up and running
 app.listen(PORT, () => {

@@ -21,17 +21,16 @@ const SidebarTags = () => {
   }
 
 //TO_DO: A function to handle the Delete funtionality
-//    const onDelete = (student) =>{
-//     //console.log(student, "delete method")
-//     return fetch(`http://localhost:8080/api/students/${student.studentid}`, {
-//       method: "DELETE"
-//     }).then((response) => {
-//       //console.log(response);
-//       if(response.ok){
-//         loadStudents();
-//       }
-//     })
-//   }
+const onDelete = (tag) =>{
+    return fetch(`http://localhost:8080/api/tags/${tag.tagid}`, {
+      method: "DELETE"
+    }).then((response) => {
+      //console.log(response);
+      if(response.ok){
+        loadTags();
+      }
+    })
+  }
 
 // TO-DO: A function to handle the main part of the screen with the tags
 //   function showTags(tag){
@@ -49,7 +48,7 @@ const SidebarTags = () => {
     <div>
     <div className='sidebar-tags'>
         <MyFormTag onSaveTag={onSaveTag}/>
-        <ListTags tags={tags} />
+        <ListTags tags={tags} onDelete={onDelete} />
 
     </div>
     </div>

@@ -5,9 +5,9 @@ const ListTags = (props) => {
     
     const {tags} = props;
 
-    // function handleDelete(student){
-    //   props.onDelete(student)
-    // }
+    function handleDelete(tag){
+      props.onDelete(tag)
+    }
 
     function handleTag(tag){
       console.log(tag, "From ListTags from the li");
@@ -19,7 +19,7 @@ const ListTags = (props) => {
         <h2> Tags </h2>
         <ul>
           {tags.map((tag) => {
-            return <li key={tag.tagid}> <a tag={tag} onClick={()=>{handleTag(tag)}}> {tag.name}</a> <ioicons.IoTrashBin style={{ marginInlineStart: '5px', color:"red"}}/></li>
+            return <li key={tag.tagid}> <a tag={tag} onClick={()=>{handleTag(tag)}}> {tag.name}</a> <ioicons.IoTrashBin style={{ marginInlineStart: '5px', color:"red"}} onClick={()=>{handleDelete(tag)}}/></li>
           })}
         </ul> 
       </div>
