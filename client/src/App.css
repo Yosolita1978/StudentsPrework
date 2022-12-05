@@ -43,10 +43,14 @@ a.navbar-brand {
 }
 
 .mainscreen {
-  /*	position: absolute;*/
-  /*top: 90px;
-    */
-  /*width: 100% !important; no width needed and stop using !important*/
+  padding-left: 300px;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.mainscreen-tags {
   padding-left: 300px;
   padding-top: 2%;
   display: flex;

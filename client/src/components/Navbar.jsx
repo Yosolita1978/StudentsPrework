@@ -18,7 +18,7 @@ function MyNavBar(props) {
     <>
     <Navbar bg="dark" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
         <img
               src={BlueTechtonica}
               height="30"

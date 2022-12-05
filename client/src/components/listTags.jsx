@@ -11,7 +11,7 @@ const ListTags = (props) => {
 
     function handleTag(tag){
       console.log(tag, "From ListTags from the li");
-      //props.show(student);
+      props.showTags(tag);
     }
       
     return (
