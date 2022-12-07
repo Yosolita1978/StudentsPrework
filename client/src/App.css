@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  background-color: rgb(238, 232, 232) !important;
 }
 
 a.navbar-brand {
@@ -43,14 +44,17 @@ a.navbar-brand {
 }
 
 .mainscreen {
+  height: 100%;
   padding-left: 300px;
   padding-top: 2%;
   display: flex;
   flex-direction: column;
   align-content: center;
+  background-color: rgb(238, 232, 232);
 }
 
 .mainscreen-tags {
+  width: 100%;
   padding-left: 300px;
   padding-top: 2%;
   display: flex;
@@ -78,6 +82,21 @@ ul {
 
 li {
   padding: 5px;
+}
+
+li:visited{
+  background-color: rgb(238, 232, 232);
+  color: black;
+}
+
+li:hover{
+  background-color: rgb(238, 232, 232);
+  color: black;
+}
+
+li:active{
+  background-color: rgb(238, 232, 232);
+  color: black;
 }
 
 form {
