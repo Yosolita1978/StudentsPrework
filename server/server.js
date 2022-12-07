@@ -59,6 +59,17 @@ app.delete('/api/students/:studentId', cors(), async (req, res) =>{
     }
   });
 
+    // create the get request for tags for an especific student
+    app.get('/api/students/:studentId/tags', cors(), async (req, res) => {
+      let studentId = req.params.studentId;
+      try {
+        const { rows: tags } = await db.query('SELECT tags.tagid, tags.name, tagsforstudents.taggeddate FROM tags JOIN tagsforstudents ON tags.tagid=tagsforstudents.tags_pkey WHERE tagsforstudents.students_pkey=$1', [studentId]);
+        res.send(tags);
+      } catch (e) {
+        return res.status(400).json({e });
+      }
+    });
+
   // create the POST request for TAGS
 app.post('/api/tags', cors(), async (req, res) => {
   const newTag = {name: req.body.name};
